@@ -4,5 +4,32 @@
   "author": {
     "name": "Santiago Gonzalez",
     "email": "santiago.gonzalez.courel@gmail.com"
-  }
+  },
+  "commands": [
+    {
+      "name": "feature",
+      "description": "Create a new feature branch following Git Flow convention",
+      "file": "../commands/feature.md"
+    },
+    {
+      "name": "release",
+      "description": "Create a new release branch following Git Flow convention",
+      "file": "../commands/release.md"
+    },
+    {
+      "name": "hotfix",
+      "description": "Create a new hotfix branch following Git Flow convention",
+      "file": "../commands/hotfix.md"
+    },
+    {
+      "name": "finish",
+      "description": "Finish and merge a feature/release/hotfix branch",
+      "file": "../commands/finish.md"
+    },
+    {
+      "name": "flow-status",
+      "description": "Show current Git Flow status and active branches",
+      "file": "../commands/flow-status.md"
+    }
+  ]
 }
