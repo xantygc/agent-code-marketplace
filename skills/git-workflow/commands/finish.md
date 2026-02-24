@@ -7,7 +7,7 @@ description: Complete and merge current branch
 
 - Current branch: !`git branch --show-current`
 - Git status: !`git status`
-- Unpushed commits: !`git log @{u}.. --oneline 2>/dev/null || echo "No upstream branch"`
+- Unpushed commits: !`git log @{u}.. --oneline 2>/dev/null`
 - All branches: !`git branch -a`
 
 ## Your task

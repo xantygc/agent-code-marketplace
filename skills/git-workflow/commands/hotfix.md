@@ -7,7 +7,7 @@ description: Create a hotfix branch
 
 - Current branch: !`git branch --show-current`
 - All branches: !`git branch -a`
-- Recent tags: !`git tag -l --sort=-version:refname | head -10`
+- Recent tags: !`git tag -l --sort=-version:refname`
 
 ## Your task
 

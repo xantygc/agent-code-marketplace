@@ -7,9 +7,9 @@ description: Show Git Flow status
 
 - Current branch: !`git branch --show-current`
 - Git status: !`git status`
-- All local branches: !`git branch --format='%(refname:short)|%(upstream:short)|%(upstream:track)' | column -t -s '|'`
+- All local branches: !`git branch --format='%(refname:short)|%(upstream:short)|%(upstream:track)'`
 - All remote branches: !`git branch -r`
-- Recent tags: !`git tag -l --sort=-version:refname | head -10`
+- Recent tags: !`git tag -l --sort=-version:refname`
 - Recent commits on current branch: !`git log --oneline -10`
 
 ## Your task
