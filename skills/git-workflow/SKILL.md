@@ -1,6 +1,12 @@
 ---
 name: git-workflow
 description: "Git workflow automation with Jira integration and Conventional Commits. Use when the user requests to: (1) Create commits, (2) Create or publish Merge Requests/Pull Requests on GitLab, (3) Validate commit messages, (4) Check commit formatting, (5) Perform commit+push+MR workflow, (6) Mentions Jira IDs in commits, or (7) References Conventional Commits format. Handles automatic Jira ID extraction from branch names and enforces commit message format type(scope): JIRA-ID message."
+commands:
+  - feature
+  - release
+  - hotfix
+  - finish
+  - flow-status
 ---
 
 # Git Workflow with Jira Integration
