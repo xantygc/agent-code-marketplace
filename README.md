@@ -7,56 +7,52 @@
 
 ## 🚀 Quick Start
 
-### 1. Clone the Repository
+### Installation
+
+Add the marketplace to Claude Code using one of these methods:
+
+#### Method 1: Remote Installation (Recommended)
 
 ```bash
-# Clone the repository
-git clone https://github.com/xantygc/agent-code-marketplace.git
-
-# Navigate to the project directory
-cd agent-code-marketplace
-```
-
-### 2. Install the Marketplace in Claude Code
-
-There are two ways to add the marketplace to Claude Code:
-
-#### Option A: Local Installation (Recommended for Development)
-
-1. Use the plugin marketplace command:
-```
-/plugin marketplace add /path/to/agent-code-marketplace
-```
-Or on Windows:
-```
-/plugin marketplace add C:\projects\agent-code-marketplace
-```
-
-2. Restart Claude Code to load the marketplace
-
-**Note:** Claude Code will automatically detect the `.claude-plugin/marketplace.json` file.
-
-#### Option B: Remote Installation (via Git)
-
-1. Add the marketplace via Git URL:
-```
 /plugin marketplace add https://github.com/xantygc/agent-code-marketplace.git
 ```
 
-2. Restart Claude Code
+#### Method 2: Local Installation (For Development)
 
-Claude Code will clone the repository and automatically detect the marketplace configuration.
+1. Clone the repository:
+```bash
+git clone https://github.com/xantygc/agent-code-marketplace.git
+cd agent-code-marketplace
+```
 
-### 3. Use the Skills
+2. Add to Claude Code:
+```bash
+/plugin marketplace add /path/to/agent-code-marketplace
+```
 
-Once installed, the skills are available:
+On Windows:
+```cmd
+/plugin marketplace add C:\projects\agent-code-marketplace
+```
+
+### After Installation
+
+1. **Restart Claude Code** to load the marketplace
+2. Verify installation by running `/plugin` - you should see "pecholata-marketplace"
+3. Skills are now available for use
+
+### Using the Skills
+
+The skills are automatically invoked by Claude Code when relevant. For example:
 
 ```
-# Use git-workflow for commits with Jira integration
-/git-workflow
+# Git workflow skill activates automatically when you:
+- "Create a commit with these changes"
+- "Create a merge request"
+- "Validate my commit messages"
 
-# Or invoke via Claude Code conversation
-"Create a commit with Jira ID AZ-123"
+# Or explicitly invoke it:
+/git-workflow
 ```
 
 ## 📦 Available Skills

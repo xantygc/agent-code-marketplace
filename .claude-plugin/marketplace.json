@@ -12,15 +12,11 @@
   "plugins": [
     {
       "name": "git-workflow",
+      "description": "Git workflow automation with Jira integration and Conventional Commits format",
       "source": "./",
-      "description": "Git workflow automation with Jira integration and GitLab commit format",
-      "version": "1.0.0",
-      "author": {"name": "Santiago Gonzalez"},
-      "license": "MIT",
-      "keywords": ["git", "workflow", "jira", "gitlab", "conventional-commits"],
       "strict": false,
       "skills": [
-        "./skills/git-workflow/SKILL.md"
+        "./skills/git-workflow"
       ]
     }
   ]
