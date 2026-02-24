@@ -23,35 +23,29 @@ There are two ways to add the marketplace to Claude Code:
 
 #### Option A: Local Installation (Recommended for Development)
 
-1. Run the plugin command in Claude Code:
+1. Use the plugin marketplace command:
 ```
-/plugin
-```
-
-2. When prompted for "marketplace source", enter the **absolute path** to your cloned repository:
-```
-/mnt/c/projects/agent-code-marketplace
+/plugin marketplace add /path/to/agent-code-marketplace
 ```
 Or on Windows:
 ```
-C:\projects\agent-code-marketplace
+/plugin marketplace add C:\projects\agent-code-marketplace
 ```
 
-3. Restart Claude Code to load the plugins
+2. Restart Claude Code to load the marketplace
 
-#### Option B: Remote Installation
+**Note:** Claude Code will automatically detect the `.claude-plugin/marketplace.json` file.
 
-1. Run the plugin command:
-```
-/plugin
-```
+#### Option B: Remote Installation (via Git)
 
-2. Enter the marketplace URL:
+1. Add the marketplace via Git URL:
 ```
-https://raw.githubusercontent.com/xantygc/agent-code-marketplace/master/marketplace.json
+/plugin marketplace add https://github.com/xantygc/agent-code-marketplace.git
 ```
 
-3. Restart Claude Code
+2. Restart Claude Code
+
+Claude Code will clone the repository and automatically detect the marketplace configuration.
 
 ### 3. Use the Skills
 
@@ -83,30 +77,14 @@ Git workflow automation with Jira integration and GitLab-compatible commit forma
 - `/finish` - Complete and merge current branch
 - `/flow-status` - Show Git Flow status
 
-### python-poetry-dev
-Modern Python development workflow with Poetry 2.3 and Ruff linting.
-
-**Features:**
-- Poetry 2.3+ for dependency management and virtual environments
-- Ruff for fast, comprehensive linting (10-100x faster than traditional tools)
-- Production-ready project templates (pyproject.toml, ruff.toml)
-- Dependency groups (dev, test, docs)
-- CI/CD integration examples (GitHub Actions, GitLab CI)
-- Migration guides from pip/requirements.txt
-
-**Use cases:**
-- New Python project setup
-- Migrating from pip to Poetry
-- Setting up modern linting and code quality tools
-- Building Python packages or applications
-
 ## 🔧 Development
 
 ### Project Structure
 
 ```
 .
-├── marketplace.json          # Marketplace configuration
+├── .claude-plugin/
+│   └── marketplace.json     # Marketplace configuration (REQUIRED)
 ├── skills/
 │   └── git-workflow/        # Git workflow skill
 │       ├── SKILL.md         # Skill documentation
@@ -115,6 +93,8 @@ Modern Python development workflow with Poetry 2.3 and Ruff linting.
 │       └── assets/          # Templates
 └── README.md
 ```
+
+**Important:** The `marketplace.json` file MUST be inside the `.claude-plugin/` directory. This is the standard location where Claude Code looks for marketplace configuration.
 
 ### Adding New Skills
 
