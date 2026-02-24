@@ -22,19 +22,6 @@
       "skills": [
         "./skills/git-workflow/SKILL.md"
       ]
-    },
-    {
-      "name": "python-poetry-dev",
-      "source": "./",
-      "description": "Modern Python development with Poetry 2.3 for dependency management and Ruff for fast linting",
-      "version": "1.0.0",
-      "author": {"name": "Santiago Gonzalez"},
-      "license": "MIT",
-      "keywords": ["python", "poetry", "ruff", "linting", "dependencies", "development"],
-      "strict": false,
-      "skills": [
-        "./skills/python-poetry-dev/SKILL.md"
-      ]
     }
   ]
 }
