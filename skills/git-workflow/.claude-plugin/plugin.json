@@ -1,0 +1,8 @@
+{
+  "name": "git-workflow",
+  "description": "Git workflow automation with Jira integration and Conventional Commits format",
+  "author": {
+    "name": "Santiago Gonzalez",
+    "email": "santiago.gonzalez.courel@gmail.com"
+  }
+}

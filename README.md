@@ -66,12 +66,14 @@ Git workflow automation with Jira integration and GitLab-compatible commit forma
 - GitLab commit message validation
 - Merge request creation with templates
 
-**Commands available after installation:**
-- `/feature` - Create a new feature branch
-- `/release` - Create a release branch
-- `/hotfix` - Create a hotfix branch
-- `/finish` - Complete and merge current branch
-- `/flow-status` - Show Git Flow status
+**Slash Commands:**
+- `/feature` - Create a new feature branch (`feature/JIRA-ID-description`)
+- `/release` - Create a release branch (`release/X.Y.Z`)
+- `/hotfix` - Create a hotfix branch (`hotfix/JIRA-ID-description`)
+- `/finish` - Complete and merge current branch (following Git Flow)
+- `/flow-status` - Show comprehensive Git Flow status and recommendations
+
+All commands are available immediately after installation. See [git-workflow README](skills/git-workflow/README.md) for detailed usage.
 
 ## 🔧 Development
 
@@ -83,10 +85,26 @@ Git workflow automation with Jira integration and GitLab-compatible commit forma
 │   └── marketplace.json     # Marketplace configuration (REQUIRED)
 ├── skills/
 │   └── git-workflow/        # Git workflow skill
-│       ├── SKILL.md         # Skill documentation
+│       ├── .claude-plugin/
+│       │   └── plugin.json  # Plugin metadata
+│       ├── SKILL.md         # Main skill definition
+│       ├── README.md        # Skill documentation
+│       ├── commands/        # Slash commands
+│       │   ├── feature.md   # /feature command
+│       │   ├── release.md   # /release command
+│       │   ├── hotfix.md    # /hotfix command
+│       │   ├── finish.md    # /finish command
+│       │   └── flow-status.md # /flow-status command
 │       ├── scripts/         # Python validation scripts
-│       ├── references/      # Commit examples and guides
+│       │   ├── extract_jira_id.py
+│       │   ├── validate_commit_message.py
+│       │   └── validate_branch_commits.sh
+│       ├── references/      # Documentation
+│       │   ├── conventional-commits-guide.md
+│       │   └── commit-examples.md
 │       └── assets/          # Templates
+│           └── mr-template.md
+├── MARKETPLACE_SETUP.md     # Setup guide
 └── README.md
 ```
 

@@ -4,20 +4,58 @@ Git workflow automation with Jira integration and Conventional Commits format.
 
 ## Features
 
-- Automatic Jira ID extraction from branch names
-- Conventional Commits format: `type(scope): JIRA-ID description`
-- GitLab commit message validation
-- Merge request creation with templates
-- Commit message validation before committing
+- **Git Flow Branch Management**: Create feature, release, and hotfix branches
+- **Automatic Jira ID Extraction**: Extract Jira IDs from branch names
+- **Conventional Commits**: Format commits as `type(scope): JIRA-ID description`
+- **Commit Message Validation**: Validate before committing
+- **Merge Request Creation**: Generate MRs with templates
+- **Flow Status Dashboard**: View comprehensive Git Flow status
+
+## Available Commands
+
+After installing the marketplace, the following slash commands are available:
+
+### Branch Management
+
+- **`/feature`** - Create a new feature branch
+  - Format: `feature/JIRA-ID-description`
+  - Example: `feature/PROJ-123-user-authentication`
+
+- **`/release`** - Create a release branch
+  - Format: `release/X.Y.Z`
+  - Example: `release/1.2.0`
+
+- **`/hotfix`** - Create a hotfix branch
+  - Format: `hotfix/JIRA-ID-description`
+  - Example: `hotfix/PROJ-456-security-patch`
+
+### Workflow Commands
+
+- **`/finish`** - Complete and merge current branch
+  - Merges feature/hotfix/release branches following Git Flow
+  - Automatically creates tags for releases
+  - Cleans up merged branches
+
+- **`/flow-status`** - Show Git Flow status
+  - Displays current branch state
+  - Lists all active feature/hotfix/release branches
+  - Shows recent commits and tags
+  - Provides recommendations
 
 ## Usage
 
-This skill is automatically available once the marketplace is installed. Claude Code will use it when:
+### Automatic Activation
 
-1. You request to create a commit
-2. You ask to create a merge request
-3. You mention Jira IDs in commits
-4. You need to validate commit messages
+This skill is automatically invoked by Claude Code when you:
+
+1. Request to create a commit
+2. Ask to create a merge request
+3. Mention Jira IDs in commits
+4. Need to validate commit messages
+
+### Manual Invocation
+
+Use the slash commands listed above to explicitly invoke Git Flow operations.
 
 ## Structure
 
