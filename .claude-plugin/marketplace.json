@@ -17,6 +17,13 @@
       "strict": false,
       "skills": [
         "./skills/git-workflow"
+      ],
+      "commands": [
+        "./skills/commands/feature.md",
+        "./skills/commands/finish.md",
+        "./skills/commands/flow-status.md",
+        "./skills/commands/hotfix.md",
+        "./skills/commands/release.md"
       ]
     }
   ]
