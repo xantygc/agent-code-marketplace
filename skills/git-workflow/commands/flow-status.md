@@ -7,7 +7,7 @@ description: Show Git Flow status
 
 - Current branch: !`git branch --show-current`
 - Git status: !`git status`
-- All local branches: !`git branch --format='%(refname:short)|%(upstream:short)|%(upstream:track)'`
+- All local branches: !`git branch -vv`
 - All remote branches: !`git branch -r`
 - Recent tags: !`git tag -l --sort=-version:refname`
 - Recent commits on current branch: !`git log --oneline -10`
