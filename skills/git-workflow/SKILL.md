@@ -40,7 +40,7 @@ When the user requests a commit:
    ```
 
    **Rules:**
-   - Always use ENGLISH
+   - Always use ENGLISH in commit message and description. Only ENGLISH is accepted.
    - No period at end of subject line
    - Use imperative mood ("add" not "added")
    - Keep subject line under 72 characters
